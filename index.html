@@ -3,128 +3,130 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Suno — Because someone needs to hear you</title>
+<title>Suno - Because someone needs to hear you</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
-  --red:#C0392B;
-  --red2:#D14536;
-  --red3:#A32E22;
-  --cream:#F2EDE4;
-  --cream2:#EAE3D6;
-  --ink:#2B2926;
-  --ink2:#555049;
-  --soft:#8A847A;
-  --line:rgba(192,57,43,.15);
+  --red:#C0392B;--red3:#A32E22;--cream:#F2EDE4;--cream2:#EAE3D6;
+  --ink:#2B2926;--ink2:#555049;--soft:#8A847A;--line:rgba(192,57,43,.14);
 }
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;overflow-x:hidden;}
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:100;background:rgba(242,237,228,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:.9rem 0;}
-.nav-inner{max-width:1100px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;}
-.nav-logo{display:flex;align-items:center;gap:.6rem;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--ink);}
-.nav-logo svg{width:34px;height:34px;}
-.nav-cta{background:var(--red);color:#fff;text-decoration:none;padding:.5rem 1.2rem;border-radius:50px;font-size:.85rem;font-weight:500;transition:background .2s;}
-.nav-cta:hover{background:var(--red3);}
+.nav{position:sticky;top:0;z-index:100;background:rgba(242,237,228,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:.85rem 0;}
+.nav-inner{max-width:1080px;margin:0 auto;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:.55rem;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;}
+.nav-logo svg{width:32px;height:32px;}
+.nav-cta{background:var(--red);color:#fff;text-decoration:none;padding:.5rem 1.2rem;border-radius:50px;font-size:.85rem;font-weight:500;}
 
 /* HERO */
-.hero{max-width:1100px;margin:0 auto;padding:4rem 1.5rem 3rem;text-align:center;}
-.hero-logo{width:120px;height:120px;margin:0 auto 2rem;}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,3.6rem);font-weight:700;line-height:1.15;color:var(--ink);margin-bottom:1.2rem;}
+.hero{max-width:760px;margin:0 auto;padding:4rem 1.5rem 2.5rem;text-align:center;}
+.hero-logo{width:104px;height:104px;margin:0 auto 1.8rem;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5.5vw,3.2rem);font-weight:700;line-height:1.18;margin-bottom:1.3rem;}
 .hero h1 em{font-style:italic;color:var(--red);}
-.hero-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.1rem,3vw,1.5rem);color:var(--ink2);margin-bottom:1rem;}
-.hero-sub{font-size:1.05rem;color:var(--ink2);max-width:560px;margin:0 auto 1rem;font-weight:300;}
-.no-ai-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(192,57,43,.07);border:1px solid var(--line);color:var(--red3);padding:.4rem 1rem;border-radius:50px;font-size:.82rem;font-weight:500;margin-top:1rem;}
+.hero-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.05rem,3vw,1.35rem);color:var(--ink2);margin-bottom:1.3rem;}
+.hero-sub{font-size:1.08rem;color:var(--ink2);max-width:520px;margin:0 auto 1.6rem;font-weight:300;}
+.no-ai-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(192,57,43,.07);border:1px solid var(--line);color:var(--red3);padding:.45rem 1.1rem;border-radius:50px;font-size:.83rem;font-weight:500;}
 
-/* TWO DOORS */
-.doors{max-width:1000px;margin:1rem auto 0;padding:2rem 1.5rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
-.door{background:#fff;border-radius:18px;padding:2.5rem 2rem;text-align:center;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden;}
-.door:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(192,57,43,.13);}
-.door-icon{width:64px;height:64px;margin:0 auto 1.3rem;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.8rem;}
-.door-1 .door-icon{background:rgba(192,57,43,.1);}
-.door-2 .door-icon{background:rgba(192,57,43,.06);}
-.door-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:.7rem;}
-.door-1 .door-label{color:var(--red);}
-.door-2 .door-label{color:var(--soft);}
-.door h3{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:600;color:var(--ink);margin-bottom:.8rem;line-height:1.25;}
-.door p{font-size:.95rem;color:var(--ink2);font-weight:300;margin-bottom:1.5rem;}
-.door-features{list-style:none;text-align:left;margin-bottom:1.8rem;}
-.door-features li{font-size:.88rem;color:var(--ink2);padding:.35rem 0 .35rem 1.5rem;position:relative;}
-.door-features li::before{content:'';position:absolute;left:0;top:.85rem;width:6px;height:6px;border-radius:50%;background:var(--red);}
-.door-price{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--red);margin-bottom:1.3rem;}
-.door-price span{font-size:.8rem;color:var(--soft);font-family:'Jost',sans-serif;}
-.door-btn{display:block;background:var(--red);color:#fff;text-decoration:none;padding:.9rem;border-radius:50px;font-weight:600;font-size:.95rem;transition:background .2s;}
+/* REASSURANCE STRIP */
+.reassure{max-width:760px;margin:0 auto;padding:.5rem 1.5rem 3rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;}
+.reassure span{font-size:.82rem;color:var(--soft);display:flex;align-items:center;gap:.4rem;}
+
+/* DOORS */
+.doors{max-width:920px;margin:0 auto;padding:1rem 1.5rem 3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;}
+.door{background:#fff;border-radius:18px;padding:2.3rem 1.9rem;text-align:center;border:1px solid var(--line);transition:transform .25s,box-shadow .25s;}
+.door:hover{transform:translateY(-5px);box-shadow:0 22px 55px rgba(192,57,43,.12);}
+.door-icon{width:60px;height:60px;margin:0 auto 1.2rem;display:flex;align-items:center;justify-content:center;border-radius:50%;font-size:1.6rem;background:rgba(192,57,43,.08);}
+.door-label{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;margin-bottom:.6rem;}
+.door-1 .door-label{color:var(--red);}.door-2 .door-label{color:var(--soft);}
+.door h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600;margin-bottom:.7rem;}
+.door p{font-size:.92rem;color:var(--ink2);font-weight:300;margin-bottom:1.4rem;}
+.door-features{list-style:none;text-align:left;margin-bottom:1.6rem;}
+.door-features li{font-size:.86rem;color:var(--ink2);padding:.3rem 0 .3rem 1.4rem;position:relative;}
+.door-features li::before{content:'';position:absolute;left:0;top:.8rem;width:6px;height:6px;border-radius:50%;background:var(--red);}
+.door-price{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--red);margin-bottom:1.2rem;}
+.door-price span{font-size:.78rem;color:var(--soft);font-family:'Jost',sans-serif;}
+.door-btn{display:block;background:var(--red);color:#fff;text-decoration:none;padding:.85rem;border-radius:50px;font-weight:600;font-size:.92rem;}
 .door-2 .door-btn{background:var(--ink);}
-.door-btn:hover{opacity:.9;}
 
 /* SECTION */
-.section{max-width:1000px;margin:0 auto;padding:3.5rem 1.5rem;}
-.section-tag{text-align:center;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:.8rem;}
-.section h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;text-align:center;color:var(--ink);margin-bottom:.8rem;line-height:1.2;}
-.section-intro{text-align:center;font-size:1.02rem;color:var(--ink2);max-width:580px;margin:0 auto 2.5rem;font-weight:300;}
+.section{max-width:760px;margin:0 auto;padding:3.5rem 1.5rem;}
+.section-tag{text-align:center;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:.8rem;}
+.section h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,4vw,2.3rem);font-weight:700;text-align:center;margin-bottom:.8rem;line-height:1.22;}
+.section h2 em{font-style:italic;color:var(--red);}
+.section-intro{text-align:center;font-size:1rem;color:var(--ink2);max-width:560px;margin:0 auto 2.5rem;font-weight:300;}
 
-/* HOW IT WORKS */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
-.step{text-align:center;padding:1.2rem;}
-.step-num{width:44px;height:44px;margin:0 auto 1rem;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:600;}
-.step h4{font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;}
-.step p{font-size:.85rem;color:var(--ink2);font-weight:300;}
+/* FOUNDER */
+.founder{background:#fff;border-radius:22px;padding:2.8rem 2.2rem;text-align:center;border:1px solid var(--line);max-width:680px;margin:0 auto;}
+.founder-mark{font-family:'Playfair Display',serif;font-size:3rem;color:var(--red);line-height:.5;height:1.2rem;}
+.founder-quote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,3.5vw,1.7rem);font-style:italic;line-height:1.4;color:var(--ink);margin:1rem 0 1.5rem;}
+.founder-name{font-weight:600;color:var(--ink);font-size:.95rem;}
+.founder-role{font-size:.82rem;color:var(--soft);}
+
+/* WHAT HAPPENS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1rem;}
+.step{text-align:center;padding:1rem .5rem;}
+.step-num{width:42px;height:42px;margin:0 auto .9rem;background:var(--red);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;}
+.step h4{font-size:.95rem;font-weight:600;margin-bottom:.3rem;}
+.step p{font-size:.8rem;color:var(--ink2);font-weight:300;}
+
+/* WHO REACHES OUT */
+.who{background:var(--ink);color:var(--cream);border-radius:22px;padding:2.8rem 2rem;text-align:center;max-width:760px;margin:0 auto;}
+.who h2{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2rem);color:#fff;margin-bottom:1.1rem;line-height:1.3;}
+.who h2 em{color:#E0897C;font-style:italic;}
+.who p{font-size:1.02rem;color:rgba(255,255,255,.72);max-width:540px;margin:0 auto;font-weight:300;}
 
 /* WHY HUMAN */
-.why{background:var(--ink);color:var(--cream);border-radius:24px;padding:3rem 2rem;text-align:center;margin:2rem 1.5rem;max-width:1000px;margin-left:auto;margin-right:auto;}
-.why h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,4vw,2.2rem);color:#fff;margin-bottom:1rem;}
-.why h2 em{color:var(--red2);font-style:italic;}
-.why p{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto;font-weight:300;}
-.why-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:#fff;margin-top:1.5rem;}
+.why{text-align:center;}
+.why-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:var(--red);margin-top:1.2rem;}
 
 /* PRICING */
-.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
-.price-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.8rem 1.3rem;text-align:center;transition:transform .2s;}
-.price-card:hover{transform:translateY(-4px);}
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:1.6rem 1.1rem;text-align:center;}
 .price-card.popular{border-color:var(--red);border-width:2px;position:relative;}
-.popular-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .8rem;border-radius:50px;font-weight:600;}
-.price-name{font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;}
-.price-time{font-size:.78rem;color:var(--soft);margin-bottom:1rem;}
-.price-amt{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--red);margin-bottom:1rem;}
-.price-desc{font-size:.82rem;color:var(--ink2);font-weight:300;}
+.popular-tag{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .7rem;border-radius:50px;font-weight:600;}
+.price-name{font-size:.92rem;font-weight:600;margin-bottom:.25rem;}
+.price-time{font-size:.76rem;color:var(--soft);margin-bottom:.9rem;}
+.price-amt{font-family:'Playfair Display',serif;font-size:1.85rem;font-weight:700;color:var(--red);margin-bottom:.9rem;}
+.price-desc{font-size:.8rem;color:var(--ink2);font-weight:300;}
 
 /* FAQ */
-.faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:.8rem;}
-.faq-q{font-weight:600;color:var(--ink);font-size:1rem;margin-bottom:.5rem;}
-.faq-a{font-size:.92rem;color:var(--ink2);font-weight:300;}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.4rem;margin-bottom:.7rem;}
+.faq-q{font-weight:600;font-size:.97rem;margin-bottom:.4rem;}
+.faq-a{font-size:.9rem;color:var(--ink2);font-weight:300;}
 
 /* CRISIS */
-.crisis{background:rgba(192,57,43,.06);border:1px solid var(--line);border-radius:14px;padding:1.5rem;text-align:center;max-width:700px;margin:2rem auto 0;}
-.crisis p{font-size:.9rem;color:var(--ink2);}
+.crisis{background:rgba(192,57,43,.06);border:1px solid var(--line);border-radius:14px;padding:1.4rem;text-align:center;max-width:680px;margin:2rem auto 0;}
+.crisis p{font-size:.88rem;color:var(--ink2);}
 .crisis strong{color:var(--red);}
 
-/* FOOTER */
-.footer{background:var(--ink);color:rgba(255,255,255,.6);padding:3rem 1.5rem 2rem;text-align:center;margin-top:3rem;}
-.footer-logo{display:flex;align-items:center;justify-content:center;gap:.6rem;font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:.6rem;}
-.footer-logo svg{width:32px;height:32px;}
-.footer-tagline{font-style:italic;font-family:'Playfair Display',serif;color:rgba(255,255,255,.5);margin-bottom:1.5rem;}
-.footer-disclaimer{font-size:.78rem;color:rgba(255,255,255,.4);max-width:600px;margin:1.5rem auto 0;font-weight:300;line-height:1.7;}
-.footer-bottom{margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;}
+/* FINAL CTA */
+.final{text-align:center;padding:4rem 1.5rem;}
+.final h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.5vw,2.6rem);font-weight:700;margin-bottom:1rem;line-height:1.2;}
+.final h2 em{font-style:italic;color:var(--red);}
+.final-btn{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;text-decoration:none;padding:1rem 2rem;border-radius:50px;font-weight:600;font-size:1.05rem;margin-top:1rem;box-shadow:0 8px 24px rgba(37,211,102,.3);}
 
-/* FLOATING WHATSAPP */
-.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:200;text-decoration:none;font-size:1.8rem;transition:transform .2s;}
-.wa-float:hover{transform:scale(1.08);}
+/* FOOTER */
+.footer{background:var(--ink);color:rgba(255,255,255,.6);padding:3rem 1.5rem 2rem;text-align:center;}
+.footer-logo{display:flex;align-items:center;justify-content:center;gap:.55rem;font-family:'Playfair Display',serif;font-size:1.4rem;color:#fff;margin-bottom:.5rem;}
+.footer-logo svg{width:30px;height:30px;}
+.footer-tagline{font-style:italic;font-family:'Playfair Display',serif;color:rgba(255,255,255,.5);margin-bottom:1.5rem;}
+.footer-disclaimer{font-size:.76rem;color:rgba(255,255,255,.4);max-width:580px;margin:1.5rem auto 0;font-weight:300;line-height:1.7;}
+.footer-bottom{margin-top:1.8rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.1);font-size:.76rem;}
+
+.wa-float{position:fixed;bottom:1.4rem;right:1.4rem;background:#25D366;color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:200;text-decoration:none;font-size:1.7rem;}
 
 @media(max-width:768px){
   .doors{grid-template-columns:1fr;}
-  .steps{grid-template-columns:1fr 1fr;}
+  .steps{grid-template-columns:1fr 1fr;gap:1.2rem;}
   .pricing{grid-template-columns:1fr 1fr;}
 }
-@media(max-width:480px){
-  .pricing{grid-template-columns:1fr;}
-}
+@media(max-width:430px){.pricing{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 
-<!-- LOGO SVG DEFINITION -->
 <svg width="0" height="0" style="position:absolute;">
   <defs>
     <symbol id="logo" viewBox="0 0 140 140">
@@ -134,48 +136,50 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line
   </defs>
 </svg>
 
-<!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
-    <div class="nav-logo">
-      <svg><use href="#logo"/></svg>
-      Suno
-    </div>
+    <div class="nav-logo"><svg><use href="#logo"/></svg> Suno</div>
     <a href="https://wa.me/919571576718?text=Hi%20Suno%2C%20mujhe%20baat%20karni%20hai" class="nav-cta">Talk Now</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-logo"><svg viewBox="0 0 140 140" width="120" height="120"><use href="#logo"/></svg></div>
+  <div class="hero-logo"><svg viewBox="0 0 140 140" width="104" height="104"><use href="#logo"/></svg></div>
   <h1>Sometimes you don't need advice.<br>You just need <em>to be heard.</em></h1>
   <p class="hero-tagline">"Because someone needs to hear you."</p>
-  <p class="hero-sub">A real human listens. No judgment. No fixing. No diagnosis. Just someone who hears you — completely.</p>
+  <p class="hero-sub">A real human listens — fully, patiently, without judging or fixing. No bots. No scripts. Just someone who hears you.</p>
   <div class="no-ai-badge">❤️∞ No AI. Only humans. Always.</div>
 </section>
 
-<!-- TWO DOORS -->
+<div class="reassure">
+  <span>🔒 100% Private</span>
+  <span>🙂 No Judgment</span>
+  <span>💬 On WhatsApp</span>
+  <span>🤍 Real Humans</span>
+</div>
+
+<!-- DOORS -->
 <section class="doors">
   <div class="door door-1">
     <div class="door-icon">🤍</div>
     <div class="door-label">I just need to be heard</div>
     <h3>Talk to a Listener</h3>
-    <p>A trained human listener who hears you fully — without judging, advising, or fixing.</p>
+    <p>A trained human who hears you fully — without judging, advising, or trying to fix you.</p>
     <ul class="door-features">
       <li>Real human — never AI</li>
-      <li>100% anonymous</li>
+      <li>Completely anonymous</li>
       <li>No advice, no judgment</li>
       <li>On WhatsApp — no app needed</li>
     </ul>
     <div class="door-price">₹149 <span>/ session onwards</span></div>
     <a href="https://wa.me/919571576718?text=Hi%2C%20I%20just%20want%20to%20talk%20to%20a%20listener" class="door-btn">Start Talking →</a>
   </div>
-
   <div class="door door-2">
     <div class="door-icon">🩺</div>
     <div class="door-label">I need professional support</div>
     <h3>Talk to a Professional</h3>
-    <p>When you're ready for more, we connect you to verified psychologists and counsellors.</p>
+    <p>When you're ready for more, we gently connect you to verified psychologists and counsellors.</p>
     <ul class="door-features">
       <li>Verified mental health experts</li>
       <li>Psychologists & counsellors</li>
@@ -187,73 +191,56 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- FOUNDER -->
 <section class="section">
-  <div class="section-tag">How Suno Works</div>
-  <h2>Three steps. One conversation.</h2>
-  <p class="section-intro">No forms. No app. No waiting rooms. Just open WhatsApp and start.</p>
+  <div class="section-tag">Why Suno Exists</div>
+  <div class="founder">
+    <div class="founder-mark">"</div>
+    <div class="founder-quote">I built this because I once needed someone to listen — and had no one.</div>
+    <div class="founder-name">Anil Kumar</div>
+    <div class="founder-role">Founder, Suno · 16 years in public health</div>
+  </div>
+</section>
+
+<!-- WHO REACHES OUT -->
+<section class="section">
+  <div class="who">
+    <h2>The people who reach out<br>aren't <em>broken.</em></h2>
+    <p>From students before an exam, to a new mother far from home, to a VP at a global MNC, the people who message Suno are capable, successful, and human. They simply needed someone to listen. There's no shame in that. There's strength in it.</p>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS -->
+<section class="section">
+  <div class="section-tag">What Happens When You Message</div>
+  <h2>It's easier than you think.</h2>
+  <p class="section-intro">No forms. No waiting rooms. No explaining yourself to a receptionist. Just open WhatsApp.</p>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h4>Message Us</h4>
-      <p>Send a "Hi" on WhatsApp. Tell us if you want to be heard or need a professional.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h4>Choose Your Path</h4>
-      <p>A trained listener for emotional support, or a verified professional for deeper help.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h4>Pay Securely</h4>
-      <p>Simple UPI payment. Transparent pricing. No hidden costs.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <h4>Be Heard</h4>
-      <p>Your session begins. Speak freely. We're hearing you — fully.</p>
-    </div>
+    <div class="step"><div class="step-num">1</div><h4>Say Hi</h4><p>Send one message. That's the hardest part - and it's just two letters.</p></div>
+    <div class="step"><div class="step-num">2</div><h4>We Respond</h4><p>A real person replies. Warm. Unhurried. No pressure.</p></div>
+    <div class="step"><div class="step-num">3</div><h4>You Talk</h4><p>Say as much or as little as you want. We just listen.</p></div>
+    <div class="step"><div class="step-num">4</div><h4>You Feel Lighter</h4><p>Most people say the same thing after - "I feel lighter."</p></div>
   </div>
 </section>
 
 <!-- WHY HUMAN -->
-<section class="why">
+<section class="section why">
+  <div class="section-tag">Our One Promise</div>
   <h2>In a world full of bots,<br>we chose <em>humans.</em></h2>
-  <p>Everyone is building AI chatbots for mental health. We believe some things can never be automated. Being truly heard by another human is one of them.</p>
-  <p class="why-quote">"We are hearing you." ❤️∞</p>
+  <p class="section-intro">Everyone is building AI chatbots for mental wellness. We believe being truly heard by another human can never be automated. That's the one thing we'll never change.</p>
+  <div class="why-quote">"We are hearing you." ❤️∞</div>
 </section>
 
 <!-- PRICING -->
 <section class="section">
   <div class="section-tag">Simple, Honest Pricing</div>
   <h2>Being heard shouldn't cost a fortune.</h2>
-  <p class="section-intro">Flat pricing. No per-minute clock. No anxiety about the time.</p>
+  <p class="section-intro">Flat pricing. No ticking clock. No anxiety about the time.</p>
   <div class="pricing">
-    <div class="price-card">
-      <div class="price-name">Quick Vent</div>
-      <div class="price-time">10 minutes</div>
-      <div class="price-amt">₹149</div>
-      <div class="price-desc">When you just need to let it out.</div>
-    </div>
-    <div class="price-card popular">
-      <div class="popular-tag">Most Chosen</div>
-      <div class="price-name">Standard</div>
-      <div class="price-time">20 minutes</div>
-      <div class="price-amt">₹399</div>
-      <div class="price-desc">A proper conversation, unhurried.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-name">Deep Talk</div>
-      <div class="price-time">45 minutes</div>
-      <div class="price-amt">₹999</div>
-      <div class="price-desc">When there's a lot on your mind.</div>
-    </div>
-    <div class="price-card">
-      <div class="price-name">Monthly</div>
-      <div class="price-time">Unlimited</div>
-      <div class="price-amt">₹1,499</div>
-      <div class="price-desc">Whenever you need to talk.</div>
-    </div>
+    <div class="price-card"><div class="price-name">Quick Vent</div><div class="price-time">10 minutes</div><div class="price-amt">₹149</div><div class="price-desc">When you just need to let it out.</div></div>
+    <div class="price-card popular"><div class="popular-tag">Most Chosen</div><div class="price-name">Standard</div><div class="price-time">20 minutes</div><div class="price-amt">₹399</div><div class="price-desc">A proper conversation, unhurried.</div></div>
+    <div class="price-card"><div class="price-name">Deep Talk</div><div class="price-time">45 minutes</div><div class="price-amt">₹999</div><div class="price-desc">When there's a lot on your mind.</div></div>
+    <div class="price-card"><div class="price-name">Monthly</div><div class="price-time">Unlimited</div><div class="price-amt">₹1,499</div><div class="price-desc">Whenever you need to talk.</div></div>
   </div>
 </section>
 
@@ -261,38 +248,28 @@ body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line
 <section class="section">
   <div class="section-tag">Honest Answers</div>
   <h2>You probably want to ask...</h2>
-  <div style="max-width:720px;margin:0 auto;">
-    <div class="faq-item">
-      <div class="faq-q">Is this therapy?</div>
-      <div class="faq-a">No. Suno is a listening service. Our listeners hear you without judgment — they don't diagnose or treat. If you need clinical help, we connect you to verified professionals.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is it a real person or AI?</div>
-      <div class="faq-a">Always a real human. We will never replace your listener with a bot. That's our promise.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is it confidential?</div>
-      <div class="faq-a">Completely. First names only. No recordings. What you say stays between you and your listener.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Who are the listeners?</div>
-      <div class="faq-a">Trained, empathetic individuals — many with backgrounds in psychology, social work, and public health — assessed for their ability to listen with care.</div>
-    </div>
+  <div style="max-width:680px;margin:0 auto;">
+    <div class="faq-item"><div class="faq-q">Is this therapy?</div><div class="faq-a">No. Suno is a listening service. Our listeners hear you without judgment, they don't diagnose or treat. When you need clinical help, we connect you to verified professionals.</div></div>
+    <div class="faq-item"><div class="faq-q">Is it a real person or AI?</div><div class="faq-a">Always a real human. We will never replace your listener with a bot. That's our promise.</div></div>
+    <div class="faq-item"><div class="faq-q">Will anyone know?</div><div class="faq-a">No. First names only. No recordings. What you say stays between you and your listener.</div></div>
+    <div class="faq-item"><div class="faq-q">What if I don't know what to say?</div><div class="faq-a">That's okay. You don't need the right words. Just start anywhere. We'll listen.</div></div>
   </div>
-
   <div class="crisis">
-    <p>If you are in crisis or thinking about harming yourself, please reach out immediately. <strong>iCall: 9152987821</strong> — a professional helpline. Suno is a listening service, not an emergency service.</p>
+    <p>If you are in crisis or thinking about harming yourself, please reach out right away. <strong>iCall: 9152987821</strong> — a professional helpline. Suno is a listening service, not an emergency service.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FINAL CTA -->
+<section class="final">
+  <h2>You've read this far.<br>Maybe you <em>needed</em> to.</h2>
+  <p class="section-intro">Whatever it is, you don't have to carry it alone right now.</p>
+  <a href="https://wa.me/919571576718?text=Hi%20Suno%2C%20I%27d%20like%20to%20talk" class="final-btn">💬 Start on WhatsApp</a>
+</section>
+
 <footer class="footer">
-  <div class="footer-logo">
-    <svg viewBox="0 0 140 140"><use href="#logo"/></svg>
-    Suno
-  </div>
+  <div class="footer-logo"><svg viewBox="0 0 140 140"><use href="#logo"/></svg> Suno</div>
   <div class="footer-tagline">"Because someone needs to hear you."</div>
-  <p style="max-width:400px;margin:0 auto;font-size:.9rem;">Real humans, hearing real people — across India, on WhatsApp.</p>
+  <p style="max-width:400px;margin:0 auto;font-size:.88rem;">Real humans, hearing real people across India, on WhatsApp.</p>
   <p class="footer-disclaimer">Suno is a listening and emotional-support service. We are not a substitute for professional medical, psychiatric, or emergency care. Our listeners do not provide diagnosis or treatment. If you are experiencing a mental health emergency, please contact a licensed professional or call iCall at 9152987821.</p>
   <div class="footer-bottom">© 2026 Suno · Endless Care. Zero Judgment. ❤️∞</div>
 </footer>
